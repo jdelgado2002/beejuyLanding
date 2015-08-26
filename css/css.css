@@ -149,12 +149,11 @@ body, html, input, button, div, span, p {
     height: 40px;
 }
 .available-apps .android{
-      background: url('../images/btn-download-android.png');
-    height: 100px;
+    background: url('../images/btn-download-android-full.png');
+    height: 40px;
     width: 132px;
-    height: 66px;
-    margin-top: -26px;   
 }
+
 .content-howdowork-text{
     padding-top: 300px;
     float: left;
