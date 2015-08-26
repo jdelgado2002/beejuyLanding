@@ -195,34 +195,26 @@ We are aiming our custom Beecon Apps offering solutions for the following:
     </div>
         
         
-                    <div class="row" id="buzz">
+    <div class="row" id="buzz">
         <div class="content-give-us-buzz">
-        <div class="col-sm-12">
-      
-  
-            
-            <h1>GIVE US A BUZZ!!!</h1>
-            
-            <div class="content-form">
-            <form>
-            <div class="col-sm-4">
-                <input type="text" name="name" value="ENTER YOUR NAME">
+            <div class="col-sm-12">
+                <h1>GIVE US A BUZZ!!!</h1>
+                <div class="content-form">
+                    <form id="contact_form">
+                        <div class="col-sm-6">
+                            <input type="text" id="name" placeholder="NAME">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" id="e-mail" placeholder="E-MAIL">
+                        </div>
+                        <div class="col-sm-12">
+                            <textarea type="text" id="message" class="message-txt" placeholder="MESSAGE..."></textarea>
+                        </div>
+                        <input type="submit" value="Submit" class="btn-submt">
+                    </form>
                 </div>
-            <div class="col-sm-4">
-                <input type="text" name="e-mail" value="ENTER YOUR E-MAIL">
-                </div>
-            <div class="col-sm-4">
-                <input type="text" name="website" value="ENTER YOUR WEBISTE">
-                </div>
-                <div class="col-sm-12"><textarea type="text" name="firstname" class="message-txt" value="MESSAGE..."></textarea></div>
-                <input type="submit" value="Submit" class="btn-submt">
-                </form>
             </div>
-          
-            
         </div>
-        </div>
-
     </div>
         <div class="row">
         <footer>
@@ -240,16 +232,42 @@ We are aiming our custom Beecon Apps offering solutions for the following:
             </footer>
         </div>
         
-        </div>
-        <!-- /container -->
+    </div>
 
+        <!-- /container -->
+<div id="success-email" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Contact Us</h4>
+      </div>
+      <div class="modal-body">
+        <p>Email sent succesfully!</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+      
+<div id="failure-email" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Contact Us</h4>
+      </div>
+      <div class="modal-body">
+        <p>Email not sent, please try again!</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/mandrill.js"></script>
   </body>
 </html>
