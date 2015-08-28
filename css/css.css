@@ -22,6 +22,7 @@ body, html, input, button, div, span, p {
 }
 .navbar-nav>li>a{
     padding: 37px 10px !important;
+    font-size: 2em;
 }
 .navbar-default{
     background: #000;
@@ -129,7 +130,7 @@ body, html, input, button, div, span, p {
     padding: 70px 0px 0px 40px;
 }
 .available-apps span{
-    width: 144px;
+    width: 140;
     float: left;
     margin-right: 30px;
 }
@@ -145,14 +146,12 @@ body, html, input, button, div, span, p {
     width: 100%;
     height: inherit;
 }
-.available-apps .ios{
-    background: url('../images/btn-download-ios.png');
-    height: 40px;
+.available-apps .ios {
+    height: 100px;
 }
-.available-apps .android{
-    background: url('../images/btn-download-android-full.png');
-    height: 40px;
-    width: 132px;
+
+.available-apps .android {
+    height: 100px;
 }
 
 .content-howdowork-text{
@@ -304,4 +303,10 @@ and (max-width : 480px) {
     }
 }
 
+.btn-xl {  
+    padding: 15px 22px;
+    font-size: 35px;
+    line-height: 1.5;
+    border-radius: 6px
+}
    
