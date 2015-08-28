@@ -12,8 +12,9 @@ body, html, input, button, div, span, p {
 }
 
 .content-who{
-    float:left;
-    background: url('../images/bg-who.png') no-repeat;
+    float: left;
+    width: 100%;
+    background: url('../images/bg-who.png');
 }
 .item-who img{
     width:93%;
@@ -21,6 +22,7 @@ body, html, input, button, div, span, p {
 }
 .navbar-nav>li>a{
     padding: 37px 10px !important;
+    font-size: 2em;
 }
 .navbar-default{
     background: #000;
@@ -46,7 +48,7 @@ body, html, input, button, div, span, p {
     color: #FFF;
 }
 
-.content-who h1, .content-whatare h1{
+.content-who h1, .content-whatare h1, .content-how-do-work h1{
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -55,18 +57,21 @@ body, html, input, button, div, span, p {
   -webkit-text-fill-color: transparent;
     font-size: 50px;
     letter-spacing: -3px;
+    
+}
+.content-who p, .content-whatare p, .content-how-do-work li {
+    font-size: 2.333333333em;
 }
 .content-whatare{
     float:left;
     background: #E5E5E5;
 }
 .content-how-do-work{
+    width: 100%;
     float:left;
     background: #FFF;
 }
-.content-how-do-work h1{
-    
-}
+
 .content-what-are-capable{
     background: url('../images/bg_2.jpg') top center;
     height: auto;
@@ -90,9 +95,6 @@ body, html, input, button, div, span, p {
 }
 .content-text-who{
     padding-top: 220px;
-}
-.content-text-who h1{
-   
 }
 .social-share{
     float: left;
@@ -128,7 +130,7 @@ body, html, input, button, div, span, p {
     padding: 70px 0px 0px 40px;
 }
 .available-apps span{
-    width: 144px;
+    width: 140;
     float: left;
     margin-right: 30px;
 }
@@ -144,14 +146,12 @@ body, html, input, button, div, span, p {
     width: 100%;
     height: inherit;
 }
-.available-apps .ios{
-    background: url('../images/btn-download-ios.png');
-    height: 40px;
+.available-apps .ios {
+    height: 100px;
 }
-.available-apps .android{
-    background: url('../images/btn-download-android-full.png');
-    height: 40px;
-    width: 132px;
+
+.available-apps .android {
+    height: 100px;
 }
 
 .content-howdowork-text{
@@ -272,9 +272,7 @@ and (max-width : 480px) {
 .item-who img{
     margin-top: 10px;
 }
-.content-who{
-    padding-bottom: 10px;
-}
+
 .content-whatare-text{
     padding: 0px;
 }
@@ -305,4 +303,10 @@ and (max-width : 480px) {
     }
 }
 
+.btn-xl {  
+    padding: 15px 22px;
+    font-size: 35px;
+    line-height: 1.5;
+    border-radius: 6px
+}
    
