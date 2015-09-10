@@ -18,14 +18,26 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "././mail/contact_me.php",
                 type: "POST",
+                url: "https://mandrillapp.com/api/1.0/messages/send.json",
                 data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
+                    'key': '30UIQAseBBoZt_QAGJuwPA',
+                    'message': {
+                        'from_email': email,
+                        'from_name': name,
+                        'headers': {
+                            'Reply-To': email
+                        },
+                        'subject': ('Beejuy Contact Form from ' + name),
+                        'text': message + ' phone: ' + phone,
+                        'to': [
+                            {
+                                'email': 'info@greetail.co',
+                                'name': 'beejuy sales',
+                                'type': 'to'
+                            }]
+                        }
+                    },
                 cache: false,
                 success: function() {
                     // Success message

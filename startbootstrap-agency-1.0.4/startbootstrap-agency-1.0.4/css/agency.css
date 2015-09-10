@@ -868,3 +868,10 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #fed136;
 }
+
+#features {
+    background-image: url(../img/app.png);
+    background-repeat:no-repeat;
+    background-blend-mode:overlay;
+    background-position: right;
+}
