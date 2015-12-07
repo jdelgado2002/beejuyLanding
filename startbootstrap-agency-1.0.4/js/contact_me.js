@@ -17,6 +17,8 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            
+            if (name) {
             $.ajax({
                 type: "POST",
                 url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -63,6 +65,7 @@ $(function() {
                     $('#contactForm').trigger("reset");
                 },
             })
+            }
         },
         filter: function() {
             return $(this).is(":visible");

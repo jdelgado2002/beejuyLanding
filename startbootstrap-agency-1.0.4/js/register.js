@@ -7,6 +7,7 @@ $("#registerButton").click(function(){
     },
     function(data, status){
          // Success message
+        ga('send', 'event', 'Buttons', 'click', 'register');
                     $('#registerSuccess').html("<div class='alert alert-success'>");
                     $('#registerSuccess > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
