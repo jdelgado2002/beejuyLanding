@@ -37,3 +37,11 @@ $("#registerEnterprise").click(function(){
 $("#registerOnPremise").click(function(){
     ga('send', 'event', 'Buttons', 'click', 'registerOnPremise');
 });
+
+$("#registerFreeBigButton").click(function(){
+    ga('send', 'event', 'Buttons', 'click', 'registerFreeBigButton');
+});
+
+$("#login").click(function(){
+    ga('send', 'event', 'Buttons', 'click', 'login');
+});
