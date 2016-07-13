@@ -21,25 +21,33 @@ $(function() {
             if (name) {
             $.ajax({
                 type: "POST",
-                url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                url: "https://api.sendgrid.com/v3/mail/send",
+                beforeSend: function(request){
+                    request.setRequestHeader("Authorization", "Bearer ak-zXhtkQxWWzEqhmiPSaw");
+                    request.setRequestHeader("content-Type", "application/json");
+                    request.setRequestHeader("'Access-Control-Allow-Origin", "http://127.0.0.1:50162");
+                },
                 data: {
-                    'key': '30UIQAseBBoZt_QAGJuwPA',
-                    'message': {
-                        'from_email': email,
-                        'from_name': name,
-                        'headers': {
-                            'Reply-To': email
-                        },
-                        'subject': ('Beejuy Contact Form from ' + name),
-                        'text': message + ' phone: ' + phone,
-                        'to': [
-                            {
-                                'email': 'info@greetail.co',
-                                'name': 'beejuy sales',
-                                'type': 'to'
-                            }]
+                  "personalizations": [
+                    {
+                      "to": [
+                        {
+                          "email": "info@greetail.co"
                         }
-                    },
+                      ],
+                      "subject": ('Beejuy Contact Form from ' + name)
+                    }
+                  ],
+                  "from": {
+                    "email": email
+                  },
+                  "content": [
+                    {
+                      "type": "text",
+                      "value": message + ' phone: ' + phone
+                    }
+                  ]
+                },
                 cache: false,
                 success: function() {
                     // Success message
