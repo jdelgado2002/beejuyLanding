@@ -23,7 +23,7 @@ $(function() {
                 type: "POST",
                 url: "https://api.sendgrid.com/v3/mail/send",
                 beforeSend: function(request){
-                    request.setRequestHeader("Authorization", "Bearer ak-zXhtkQxWWzEqhmiPSaw");
+                    request.setRequestHeader("Authorization", "ENTER BEARER TOKEN);
                     request.setRequestHeader("content-Type", "application/json");
                     request.setRequestHeader("'Access-Control-Allow-Origin", "http://127.0.0.1:50162");
                 },
